@@ -13,6 +13,7 @@ class VideoPlayerScreen extends StatefulWidget {
 
 class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   late VideoPlayerController _controller;
+  bool isPlaying = false;
 
   @override
   void initState() {
@@ -21,32 +22,45 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       ..initialize().then((_) {
         setState(() {});
       });
+    _controller.addListener(() {
+      isPlaying = _controller.value.isPlaying;
+      setState(() {
+
+      });
+    });
   }
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context).aspectRatio;
+    // _controller.addListener(() { })
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-        backgroundColor: AppColors.darkBlue.withOpacity(0.2),
+        backgroundColor: AppColors.blackColor.withOpacity(0.2),
       ),
       body: Center(
         child: _controller.value.isInitialized
             ? AspectRatio(
-                aspectRatio: _controller.value.aspectRatio,
+                aspectRatio: size,
                 child: VideoPlayer(_controller),
               )
             : Container(),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: AppColors.redColor,
+
         onPressed: () {
           setState(() {
-            _controller.value.isPlaying
+            isPlaying
                 ? _controller.pause()
                 : _controller.play();
           });
         },
         child: Icon(
+
           _controller.value.isPlaying ? Icons.pause : Icons.play_arrow,
+          color: AppColors.whiteColor,
         ),
       ),
     );

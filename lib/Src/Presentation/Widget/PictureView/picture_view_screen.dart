@@ -13,10 +13,18 @@ class _PictureViewScreenState extends State<PictureViewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: AppBar(
-        backgroundColor: AppColors.darkBlue.withOpacity(0.2),
+        backgroundColor: AppColors.blackColor.withOpacity(0.2),
       ),
-      body: Center(child: Image.file(widget.image)),
+      body: AspectRatio(
+        aspectRatio: MediaQuery.sizeOf(context).aspectRatio,
+
+        child: FittedBox(
+            fit: BoxFit.fitHeight,
+            child: Image.file(widget.image)),
+      ),
     );
   }
 }
