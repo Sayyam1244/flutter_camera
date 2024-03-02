@@ -1,16 +1,10 @@
 # flutter_camera
-
-A new Flutter project.
+The project has both image and video recording features!!
 
 ## Getting Started
+Clone the project and add features, lets see what you can do!
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+![IMG_1997](https://github.com/Sayyam1244/flutter_camera/assets/86958173/9987b120-805d-4a33-8a93-7080eb2f707d)
+![IMG_1996](https://github.com/Sayyam1244/flutter_camera/assets/86958173/cd14ccbb-4795-49bd-9575-0b9963c339f8)
+![IMG_1995](https://github.com/Sayyam1244/flutter_camera/assets/86958173/465a8f4d-ef22-4d39-9a98-f3452ed6b832)
